@@ -1,37 +1,36 @@
-public class week1section2q2 {
+class CustomInteger {
     private int value;
 
-    
-    public week1section2q2(int value) {
+    public CustomInteger(int value) {
         this.value = value;
     }
 
-    
     public void setValue(int value) {
         this.value = value;
     }
 
-    
     public int getValue() {
-        return this.value;
+        return value;
     }
 }
 
+public class SwapExample {
     public void goodSwap(CustomInteger a, CustomInteger b) {
-        int temp = a.getValue();  
-        a.setValue(b.getValue()); 
-        b.setValue(temp);         
+        int temp = a.getValue();
+        a.setValue(b.getValue());
+        b.setValue(temp);
+    }
 
     public static void main(String[] args) {
         CustomInteger a = new CustomInteger(5);
         CustomInteger b = new CustomInteger(10);
+        System.out.println("Value of a: " + a.getValue());
+        System.out.println("Value of b: " + b.getValue());
 
-        System.out.println("Value of a: " + a.getValue());  
-        System.out.println("Value of b: " + b.getValue()); 
+        SwapExample example = new SwapExample();
+        example.goodSwap(a, b); // correctly swap a and b
 
-        goodSwap(a, b); 
-
-        System.out.println("Value of a after swap: " + a.getValue());  
-        System.out.println("Value of b after swap: " + b.getValue());  
+        System.out.println("Value of a: " + a.getValue());
+        System.out.println("Value of b: " + b.getValue());
     }
 }
